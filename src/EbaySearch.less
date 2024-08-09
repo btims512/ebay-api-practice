@@ -1,0 +1,113 @@
+.ebay-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    height: 40px;
+    margin-right: 16px;
+  }
+
+  .search-container {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    border: 1px solid #d3d3d3;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: #fff;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    button {
+      background-color: #0064d2;
+      border: none;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0052a3;
+      }
+    }
+  }
+}
+
+.results-container {
+  margin-top: 80px;
+  padding: 20px;
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-details {
+      padding: 10px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .price {
+        font-size: 18px;
+        color: #333;
+        margin: 10px 0;
+      }
+
+      .condition {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .view-link {
+        color: #0064d2;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
